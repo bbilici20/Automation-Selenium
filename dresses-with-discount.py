@@ -19,8 +19,6 @@ dresses = driver.find_elements(By.CLASS_NAME, "js-product-wrapper.product-item")
 dresses_with_discount = []
 for dress in dresses:
     try:
-        sub1 = dress.find_element(By.CLASS_NAME, "product-item__info")
-        sub2 = dress.find_element(By.CLASS_NAME, "product-item__info-box")
         discount = dress.find_element(By.CLASS_NAME, "product-item__info-campaign")
         if discount.text.strip():  
             dresses_with_discount.append(dress)
